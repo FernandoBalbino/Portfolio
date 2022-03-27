@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="shortcut icon" href="your-logo.png">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+	<title>Portfólio | Bem-vindo</title>
+	<style type="text/css" media="screen">
+
+		@keyframes beforeanimation{
+			0%{
+				width: 0%;
+			}
+
+			100%{
+				width: 100%;
+			}
+		}
+
+		@keyframes close{
+			0%{
+				transform: rotate(0deg);
+				transform: translateX(-30px);
+			}
+			100%{
+				transform: rotate(350deg);
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes afteranimation {
+			0%{
+				right: -100%;
+				top: -100%;
+			}
+
+			50%{
+				left: 50%;
+				top: 50%;
+			}
+
+			100%{
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		#tecnologias #title-tec{
+			font-size: 30px;
+		}
+
+		.container{
+			max-width: 960px;
+			margin: 20px auto;
+			box-sizing: border-box;
+		}
+
+		*{
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+		}
+
+		html{
+			scroll-behavior: smooth;
+		}
+
+		body{
+			font-family: 'Poppins', sans-serif;
+			background-color: #FAFAF8;
+			position: relative;
+		}
+
+		#header{
+			
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#header nav ul li{
+			display: inline-block;
+		}
+
+		
+
+		a{
+			color: black;
+		}
+
+		#header nav ul li a{
+			font-weight: 100;
+			padding: 10px 15px;
+			display: block;
+			transition: color 0.5s;
+		}
+
+		#tecnologias h3{
+			font-size: 20px;
+    color: #242D49;
+    margin-bottom: 20px;
+		}
+		
+		#tecnologias{
+			margin-bottom: 50px;
+		}
+		#tecnologias p{
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+		#tecnologias p span{
+			color: #FF4500;
+			font-weight: bold;
+		}
+
+		.cardFlex:hover {
+			border: 1px solid #FE4500;
+		}
+		
+
+
+		#header nav ul li a:hover{
+			color: #FF4500;
+		}
+
+		#cardTecnologias{
+			display: flex;
+			gap: 40px 30px;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cardFlex{
+			width: 93px;
+		 	display: flex;
+			transition: all 0.5s;
+			cursor: default;
+			border: 1px solid transparent;
+			height: 180px;
+			padding: 30px 20px;
+			box-shadow: 0px 12px 24px #242d4930;
+			border-radius: 10px;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		#tecnologias .cardFlex .cardInfo p{
+			font-size: 15px;
+			text-align: center;
+			margin: 0;
+		}
+
+		#tecnologias .cardFlex .cardTitle{
+			margin: 10px 0;
+		}
+
+		#header nav ul li #contact{
+			border-radius: 30px;
+			width: 100px;
+			text-align: center;
+			color: white;
+			background: linear-gradient(#FF9C76, #FF4500);
+			margin-left: 20px;
+			transition:  all 0.5s;
+		}
+
+		#header nav ul li #contact:hover, a.contact:hover{
+			color: white;
+			box-shadow: 5px 0px 100px #FF4500;
+		}
+
+		.quote{
+			display: flex;
+			align-items: center;
+		}
+
+		#btn-toback{
+			position: fixed;
+			right: 20px;
+			z-index: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 100%;
+			bottom: 20px;
+			background: #FE5001;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+		}
+
+		#btn-toback div{
+			color: white;
+			font-size: 20px;
+		}
+
+		.img-img{
+			width: 100%;
+			display: block;
+			align-content: center;
+			align-self: center;
+
+		}
+
+		.quote{
+			margin: 80px 0;
+		}
+
+		.span{
+			color: #242D49;
+			font-size: 30px;
+		}
+
+		.quote-inf h1{
+			margin: 0;
+			font-size: 50px;
+			color: #FF4500;
+			margin-bottom: 5px;
+		}
+
+		.quote-inf p{
+			
+			font-size: 18px;
+    		margin-bottom: 20px;
+    		line-height: 30px;
+		}
+
+		main{
+			margin-bottom: 40px;
+		}
+
+		.services{
+			margin-bottom: 100px;
+		}
+
+		.contact{
+			border-radius: 30px;
+			width: 100px;
+			text-align: center;
+			color: white;
+			background: linear-gradient(#FF9C76, #FF4500);
+			transition:  all 0.5s;
+			padding: 10px 15px;
+			display: block;
+
+		}
+
+
+
+
+		.services .span-s{
+			font-size: 25px;
+			color: #242D49;
+		}
+
+		.services h1{
+			margin: 0;
+			font-size: 30px;
+			color: #FF4500;
+		}
+
+		.services p{
+			margin: 10px 0;
+			line-height: 25px;
+		}
+
+		.services .contact{
+			width: 110px;
+		}
+
+		.services-cards{
+			
+			box-sizing: border-box;
+			display: flex;
+			text-align: center;
+			align-items: center;
+
+			justify-content: center;
+			gap:20px;
+			
+		}
+
+		.services-cards h3{
+			margin: 40px 0;
+			padding: 0 10px;
+			color:#FF4500;
+			letter-spacing: 2px;
+			position: absolute;
+			top: 25%;
+		}
+		
+		#label_menu{
+			z-index: 1;
+    			position: relative;
+		}
+
+		.services-cards img{
+			margin:20px 0 0 0;
+		}
+
+		.services-cards p{
+			margin:10px 10px;
+			line-height: 25px;
+			position: absolute;
+			top: 45%;
+		}
+
+		.card1, .card2, .card3, .card4{
+			box-shadow: 0px 12px 24px #242d4930;
+    		border-radius: 4px;
+    		padding: 10px;
+    		height: 400px;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: center;
+    		border: 1px solid transparent;
+    		cursor: default;
+    		transition: transform 0.5s, margin 0.5s;
+    		width: 80%;
+    		box-sizing: border-box;
+    		position: relative;
+  }
+
+    	.card4:hover{
+    		border: 1px solid #FF9C76;
+    		transform: scale(1.1);
+    		
+
+    	}
+
+    	.card3:hover{
+			border: 1px solid #FF9C76;
+			transform: scale(1.1);
+			
+    	}
+
+    	.card2:hover{
+			border: 1px solid #FF9C76;
+			transform: scale(1.1);
+			
+    	}
+
+    	.card1:hover{
+			border: 1px solid #FF9C76;
+			transform: scale(1.1);
+			
+    	}
+
+    	span{
+    		color: #FF4500;
+    	}
+
+		#cv-inf{
+			margin-bottom: 70px;
+		}
+
+		.projetos h3{
+			font-size: 25px;
+			text-align: center;
+			color: #242D49;
+			margin-bottom: 40px;
+		}
+
+
+		.sites{
+			color: #242D49;
+			font-size: 25px;
+			border-bottom: 1px solid #FF4500;
+			display: inline-block;
+			margin-bottom: 40px;
+		}
+		
+
+		.sites-img{
+		display: flex;
+    gap: 10px;
+    height: 470px;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+		}
+
+		.sites-img img{
+
+			width: 195px;
+			border-radius: 20px;
+		}
+
+		.sites-img a {
+			display: block;
+			position: relative;
+
+		}
+
+		.sites-img a:before{
+			content: '';
+			border-radius: 20px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			
+			background: transparent;
+			transition: all .5s;
+		}
+
+		footer{
+			display: flex;
+			justify-content: space-around;
+			align-items: start;
+			gap:20px;
+			margin-bottom: 50px;
+		}
+
+		footer h4{
+			color: #242D49;
+			margin:20px 0;
+			font-size: 25px;
+		}
+
+		footer a{
+			margin: 10px 0;
+			display: inline-block;
+		}
+		.services-cards .img-img{
+			position: absolute;
+			top: 50px;
+		}
+
+		footer a:hover{
+			color: #FF4500;
+		}
+
+		footer p{
+			line-height: 25px;
+			font-weight: 200;
+			font-size: 20px;
+		}
+
+
+
+		.sites-img a:hover:before{
+			background: rgba(0,0,0,.5);
+			animation-name: beforeanimation;
+			animation-duration: 0.7s;
+		}
+
+		.sites-img a:after{
+			opacity: 0;
+		}
+
+		.sites-img a:hover:after{
+			content: 'Ver completo';
+			display: block;
+			position: absolute;
+			text-align: center;
+			border-radius: 20px;
+			width: 130px;
+			animation-name: afteranimation;
+			animation-duration: 1s;
+
+			font-size: 16px;
+			border: 3px solid white;
+			left: 50%;
+			top: 50%;
+			color: white;
+			padding: 10px 15px;
+			transform: translate(-50%, -50%);
+			opacity: 1;
+		}
+
+		#header nav ul #whatsapp{
+			display: none;
+		}
+
+
+		.reservs p{
+			font-style: italic;
+			text-align: center;
+			font-weight: lighter;
+		}
+
+		label, input{
+			display: none;
+		}
+
+
+		@media screen and (max-width: 960px) {
+			.container{
+				width: 90%;
+				margin: 20px auto;
+			}
+
+			.cardFlex{
+				width: 85px;
+				height: 150px;
+			}
+			#tecnologias h3{
+				
+				font-size: 20px;
+			}
+
+			#chk:checked  #header ul li a{
+				color: red;
+			}
+
+			label{
+				display: block;
+			}
+
+			#header nav ul #whatsapp{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#header nav ul #whatsapp div{
+			display: inline-block;
+			}
+
+			#header nav ul #whatsapp img{
+				border-radius: 50%;
+			}
+
+			#header nav ul #whatsapp span{
+				display: inline-block;
+				color: white;
+				padding: 10px;
+				float: right;
+			}
+
+
+
+
+			#header ul{
+				position: fixed;
+				background-color: #FF4500;
+				top: 0;
+				left: -100%;
+				height: 100vh;
+				width: 100%;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				transition: all 0.5s;
+			}
+
+			.menu{
+				animation-name: close;
+				animation-duration: 1.2s;
+			}
+
+			#menu-change-js{
+				background-color: #fafaf8;
+    			padding: 15px;
+    			cursor: pointer;
+    			transition: 0.5s;
+				border-radius:50%;
+			}
+
+
+			
+			
+
+
+			
+
+			#header nav ul li a{
+				display: block;
+				color: white;
+				padding: 20px;
+			}
+
+
+
+			#header nav ul li #contact{
+				margin: 0 auto;
+			}
+
+			
+
+			#header nav ul li{
+				display: block;
+				
+			}
+
+			.quote{
+				flex-wrap: wrap;
+			}
+
+
+
+			.sites-img a:before{
+			background: rgba(0,0,0,.5);
+			}
+
+			footer{
+				flex-direction: column;
+			}
+
+			.sites-img a:after{
+			content: 'Ver completo';
+			display: block;
+			position: absolute;
+			text-align: center;
+			border-radius: 20px;
+			width: 130px;
+			font-size: 16px;
+			border: 3px solid white;
+			left: 50%;
+			top: 50%;
+			color: white;
+			padding: 10px 15px;
+			transform: translate(-50%, -50%);
+			opacity: 1;
+		}
+
+			.services-cards{
+				flex-wrap: wrap;
+
+			}
+
+			.quote{
+				margin-top: 0;
+			}
+
+			#sobre h1{
+				line-height: 45px;
+			}
+
+			#sobre p {
+				line-height: 25px;
+			}
+
+			.sites-img{
+				height: auto;
+				flex-wrap: wrap;
+				overflow: visible;
+			}
+		}
+	</style>
+</head>
+<body>
+	<a href="#"><div id='btn-toback'><div>&#9650;</div></div></a>
+  <div class="container">
+	<header id="header" class="">
+	 
+		<div class="logo">
+			<a href="index.html" title='logo'>Portfólio</a>
+		</div>
+
+		<nav>
+			<input id="chk" type="checkbox" name="" value="">
+			<label id='label_menu' for="chk">
+				<img id="menu-change-js" src="menu.svg" alt="">
+			</label>
+			
+			<ul>
+				<li><a href="index.html" class="js-menu" title="Sobre">Sobre</a></li>
+				<li><a href="#cv-inf" class="js-menu" title="Serviços">Serviços</a></li>
+				<li><a href="#title-projects" class="js-menu" title="Projetos">Projetos</a></li>
+				<li><a href="#contact-footer" class="js-menu" id="contact" title="Contato">Contato</a></li>
+				<li id="whatsapp"><a class="j-menu" href="https://wa.me/5582987239026"  title="Projetos"><div><img src="whatsapp.svg" width="50" height="50" alt=""></div><div><span>Vem trocar uma ideia =D</span></div></a></li>
+
+			</ul>
+		</nav>
+
+	</header><!-- /header -->
+  </div>
+
+  <div class="container">
+  	
+
+  	<main>
+  		
+      <article class="start">
+      	<section class="quote">
+      		<div id="sobre" class="quote-inf">
+      			<h2 class="span">Olá! Eu sou</h2>
+      			<h1>Fernando Kauã</h1>
+      			<p>Desenvolvedor Front-end, Back-end e Freelancer apaixonado por jogos, animais e músicas!</p>
+      			<a class="contact" href="#contact-footer">Contato</a>
+      		</div>
+
+      		<div class="img">
+      			<img class="img-img"  src="logo2.png"  alt="">
+      		</div>
+      	</section>
+      </article>
+
+      <article class="services">
+      	<section id="cv-inf">
+      		<h2 class="span-s">Meus</h2>
+      			<h1>Serviços</h1>
+      			<p>Baixe meu currículo para consultar certificados e experiências!</p>
+      			<a class="contact" type="application/pdf" download="CVFullstackFernandoBalbino.pdf" href="CVFullstackFernandoBalbino.pdf">Download CV</a>
+      	</section>
+
+      	<section  class="services-cards">
+      		<div class="card1">
+      			<img width="50" height="50" class="img-img" src="backendGoogle.svg" alt="">
+      			<h3>Back-end Developer</h3>
+      			<p>Desenvolvimento de aplicações e automatizações com Node.js e banco de dados.</p>
+      		</div>
+      		<div class="card2">
+      			<img width="50" height="55" class="img-img" src="computador-desktop (1).svg" alt="">
+      			<h3>Front-end Developer</h3>
+      			<p>Desenvolvimento de sites profissionais, com as melhores tecnologias do mercado!</p>
+      		</div>
+      		<div class="card3">
+      			<img width="50" height="50" class="img-img" src="dispositivos.svg" alt="">
+      			<h3>Web Design Responsivo</h3>
+      			<p>Adaptação de layouts. Sites adaptáveis a 98% dos dispositivos.</p>
+      		</div>
+      		<div class="card4">
+      			<img width="50" height="50" class="img-img" src="ux (1).svg" alt="">
+      			<h3>User Experience</h3>
+      			<p>Conjunto de elementos e fatores relativos à interação do usuário com um determinado sistema ou serviço.</p>
+      		</div>
+      	</section>
+      </article>
+      <article id='tecnologias'>
+      	<section>
+      		<h3 id='title-tec'>Tecnologias</h3>
+      		<p>Tecnologias que tenho <span>conhecimentos</span> e que aplico em minhas aplicações.</p>
+      		<div id='cardTecnologias'>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/html5.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Html5</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/css3.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Css3</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/javascript.jpg" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Javascript</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/bootstrap.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Bootstrap</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/react.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>React</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/git.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Git</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/mysql.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Mysql</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/visual-studio.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Visual</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/nodejs.webp" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Node Js</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/firebaseReact.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Firebase</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/redux.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>Redux</h3>
+      				</div>
+      				
+      			</div>
+      			<div class="cardFlex">
+      				<div class="cardImg">
+      					<img width="100" height="100" src="icons/mongodb.png" alt="">
+      				</div>
+      				<div class="cardTitle">
+      					<h3>MongoDb</h3>
+      				</div>
+      				
+      			</div>
+      		</div>
+      	</section>
+      </article>
+      <article class="projetos">
+      	<section>
+      		<h3 id="title-projects">Projetos <span>profissionais</span> e pessoais</h3>
+
+      		<div class="sites">Web Sites</div>
+
+      		<div class="sites-img">
+      			<a target="_blank" href="https://fernandobalbino.github.io/ConstructSite/"><img height="472" src="sitesIMG/site1R.jpg" alt=""></a>
+      			<a target="_blank" href="https://fernandobalbino.github.io/TecTecnologic/"><img src="sitesIMG/site2R.jpg" alt=""></a>
+      			<a target="_blank" href="https://fernandobalbino.github.io/StoryGraphic/"><img src="sitesIMG/site3R.jpg" alt=""></a>
+      			<a target="_blank" href="https://fernandobalbino.github.io/SorveteriaReact/"><img src="sitesIMG/site4R.jpg" alt=""></a>
+      		</div>
+      	</section>
+      </article>
+      
+  	</main>
+
+
+  	<footer id="contact-footer">
+  		<div class="grow">
+  			<h4>Obrigado pela <span>visita</span></h4>
+  			<p>Obrigado pela visita
+             Fico muito feliz com sua presença, mande uma mensagem para trocarmos experiências e fazer network!</p>
+  		</div>
+
+  		<div>
+  			<h4>Redes</h4>
+  			<ul>
+  			    <li><a href="https://github.com/FernandoBalbino">Github</a></li>
+  			    <li><a href="https://www.linkedin.com/in/fernando-balbino-aa2678218/">Linkedin</a></li>
+  			    <li><a href="https://wa.me/5582987239026">Whatsapp</a></li>
+  			</ul>
+  		</div>
+
+  		<div>
+  			<h4>Contato</h4>
+
+  			<ul>
+  			    <li><a href="mailto:dev.fernandobalbino@gmail.com">Email</a></li>
+  			    <li><a href="https://wa.me/5582987239026">Whatsapp</a></li>
+  			    
+  			</ul>
+  		</div>
+  	</footer>
+
+  	<section class="reservs">
+  		<p>Fernando Kauã da Silva Balbino - Todos os direitos reservados</p>
+  	</section>
+  </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <script>
+    
+
+    const menuIcone = document.querySelector('#menu-change-js');
+	const itensMenu = document.querySelectorAll('.js-menu')
+	const menu = document.querySelector('#header ul')
+	
+	const input = document.querySelector('#chk')
+	for(var i = 0; i<itensMenu.length;i++){
+    	  itensMenu[i].addEventListener('click', () => {
+			menu.style.left='-100%'
+			menuIcone.src='menu.svg'
+			menuIcone.setAttribute('class', 'menu_closed')
+			document.body.style.overflowY='auto'
+			input.checked=false;
+		  })
+		}
+		
+    input.addEventListener('change', () => {
+
+    if(input.checked){
+			menuIcone.setAttribute('class', 'menu')
+			menuIcone.src='close.svg'
+			menu.style.left='0'
+
+			document.body.style.overflowY='hidden'
+		} else{
+			menuIcone.setAttribute('class', 'menu_closed')
+			menuIcone.src='menu.svg'
+			menu.style.left='-100%'
+						document.body.style.overflowY='auto'
+
+	   }
+    })
+   
+
+   
+  </script>
+</body>
+</html>
